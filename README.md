@@ -12,6 +12,8 @@
 
 可以 。可以透過 opencv 的 Face Recognition 辦到臉部辨識。
 
+opencv 的 Face Recognition 可參考 [FaceDetect](https://github.com/twtrubiks/FaceDetect#後記)
+
 ### 那為什麼在網路上找 Face Recognition ，相關近期資料卻都是 深度學習(TensorFlow) 搭配 OpenCV ?
 
 目前猜測是辨識精準度的問題。
