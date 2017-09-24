@@ -1,8 +1,8 @@
-# face-recognition-notes 
+# face-recognition-notes
 
+## 人臉辨識 ( face recognition ) - 使用 深度學習 ( TensorFlow ) 和 OpenCV
 
-## 人臉辨識(face recognition) - 使用 深度學習(TensorFlow) 和 OpenCV - 1/20
-
+這些是我之前有興趣做的簡單筆記，大家可以參考看看 :smiley:
 
 ### 深度學習
 
@@ -31,25 +31,25 @@
 
 BossSensor 流程 :
 
-<b>步驟一 </b> : 收集圖片，圖片只保留臉部的部份，因為如果有背景以及其他不必要的部份，會影響訓練以及辨識.
+**步驟一** : 收集圖片，圖片只保留臉部的部份，因為如果有背景以及其他不必要的部份，會影響訓練以及辨識.
 
 方法: 使用opencv截取人臉的部份。(在opencv裡，可以透過 haarcascade_frontalface_default.xml 來偵測出目前是否為人臉)
 
-<b>步驟二 </b> : 開始建立 機器學習(Machine Learning) 的 model
- 
+**步驟二** : 開始建立 機器學習(Machine Learning) 的 model
+
 方法 : 透過 Keras  卷積深度神經網路（Convolutional Neuron Networks, CNN） 建立 model
 
 大家為什麼選 卷積深度神經網路（Convolutional Neuron Networks, CNN） ?
 
-因為卷積神經網路 (深度學習結構)在<b> 圖像 </b>和<b> 語音辨識 </b>方面能夠給出更優的結果。
+因為卷積神經網路 (深度學習結構)在 **圖像** 和 **語音辨識** 方面能夠給出更優的結果。
 
 * Keras 介紹
 
 Keras的後端有 TensorFlow(tf) 以及 Theano(th)
 
-TensorFlow(tf) 表達模式 - (100,3,16,32)  
+TensorFlow(tf) 表達模式 - (100,3,16,32)
 
-Theano(th) 表達模式 - (100,16,32,3)     
+Theano(th) 表達模式 - (100,16,32,3)
 
 100,3 這部份是指 100張 RPG 三通道的圖片
 
@@ -61,7 +61,7 @@ Theano(th) 表達模式 - (100,16,32,3)
 
 dataset --> build Model --> train Model  --> save Model
 
-<b>步驟三 </b> : 開始辨識
+**步驟三** : 開始辨識
 
 load Model --> 透過相機截取臉部 --> 將大小轉成(64*64) --> 比對 (開始辨識)
 
@@ -70,7 +70,6 @@ load Model --> 透過相機截取臉部 --> 將大小轉成(64*64) --> 比對 (�
 由於 Microsoft Face API 的辨識速度很快，而且上傳給他的圖片也只有幾張而已，猜測他們的技術是比對兩張圖片的特徵值，
 
 而不是使用深度學習
-
 
 ### 目前深度學習的應用
 
@@ -81,6 +80,3 @@ load Model --> 透過相機截取臉部 --> 將大小轉成(64*64) --> 比對 (�
 * Google Now 的語音辨識，透過學習，辨識率越來越精準
 
 * Google 相簿的自動分類 (對照片自動下標籤)
-
-
-
